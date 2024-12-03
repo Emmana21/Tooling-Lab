@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="resources/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/styles/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mainHeader">Rock Paper Scissors</h1>
+        <div id="welcome-screen">
+            <form id="name-form">
+                <div class="form-group">
+                    <label for="username">Type your name: </label>
+                    <input class="form-control" type="text" id="username" required placeholder="Enter Name Here..." minlength="2" maxlength="15" />
+                </div>
+                <button class="btn btn-primary" id="start-game-button" type="button">Start Game!</button>
+            </form>
+        </div>
+        <div id="game-screen" class="d-none">
+            <div id="score-tally">
+                <p id="score">User: 0 v CPU: 0</p>
+            </div>
+            <form id="game-form">
+                <div class="form-group">
+                    <label for="user-selection">Select your choice: </label>
+                    <select class="custom-select" id="user-selection">
+                        <option value="rock">Rock</option>
+                        <option value="paper">Paper</option>
+                        <option value="scissors">Scissors</option>
+                    </select>
+                </div>
+                <button class="btn btn-success" type="button" id="go-button">Go!</button>
+            </form>
+            <p id="game-history"></p>
+            <button id="reset-game-button" class="btn btn-secondary d-none">Reset</button>
+        </div>
+    </div>
+    <script src="resources/scripts/rock_paper_scissors.js"></script>
+    <script src="resources/scripts/index.js"></script>
+</body>
+
+</html>
